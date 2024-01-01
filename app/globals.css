@@ -2,26 +2,133 @@
 @tailwind components;
 @tailwind utilities;
 
+html,
+body,
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+:root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.main_color {
+  color: #B88087;
+}
+
+.main_secondry_color {
+  color: #8a8a8a;
+}
+
+.main_gray {
+  color: #54595F;
+}
+
+.main_bg {
+  background-color: #3a3a3a;
+}
+
+.main_secondry_bg {
+  background-color: #B88087;
+}
+
+.main_logo_menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.banner_image {
+  height: 450px;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.owl_box {
+  width: 130px;
+  height: 150px;
+  border-radius: 50% 50% 50% 50%;
+  border: dashed;
+  border-width: 1px 1px 1px 1px;
+  border-color: #BDC2CB;
+  padding: 0px 0px 0px 0px;
+} 
+
+.sequence_image_one {
+  position: absolute;
+  top: -20px;
+  left: -25px;
+}
+
+.sequence_image_two {
+  position: absolute;
+  bottom: 5px;
+  left: -25px;
+}
+
+.sequence_image_three {
+  position: absolute;
+  top: -30px;
+  left: 30px;
+}
+
+.sequence_image_four {
+  position: absolute;
+  bottom: -5px;
+  left: 30px;
+}
+
+.sequence_arrow_one {
+  position: absolute;
+  top: 0px;
+  right: -50px;
+}
+
+.sequence_arrow_two {
+  position: absolute;
+  bottom: 100px;
+  right: -50px;
+}
+
+.sequence_arrow_three {
+  position: absolute;
+  top: 0px;
+  right: -50px;
+}
+
+.round_box {
+  border-radius: 50px;
+}
+
+.top_header_icon {
+  width: 15px;
+  height: 15px;
+}
+
+.product_image {
+  height: 350px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.cart_items_counter {
+  position: absolute;
+  top: -10px;
+  right: -5px;
 }

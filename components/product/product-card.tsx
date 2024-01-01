@@ -3,13 +3,13 @@
 import Image from "next/image";
 import { MouseEventHandler } from "react";
 import { Expand, ShoppingCart } from "lucide-react";
-
+import Currency from "../ui/currency";
 import { Product } from "@/types";
 import IconButton  from "@/components/ui/icon-button";
-import Currency from "../ui/currency";
 import { useRouter } from "next/navigation";
 import usePreviewModal from "@/hooks/use-preview-modal"
 import useCart from "@/hooks/use-cart";
+import Button from "../ui/button";
  
 interface ProductCard {
     data: Product;
@@ -47,9 +47,9 @@ data
                 <Image 
                     src={data?.images?.[0]?.url}
                     alt="Image"
-                    className="aspect-square object-cover rounded-md"
+                    className="product_image object-cover rounded-md"
                     width={300}
-                    height={450}
+                    height={500}
                 /> 
                 <div className="opacity-0 group-hover:opacity-100 transition absolute px-6 w-full bottom-5">
 
@@ -69,21 +69,25 @@ data
 
             {/* Description */}
 
-            <div>
-                <p className="font-semibold text-lg">
+            <div className="text-center">
+                <p className="font-semibold text-lg main_gray">
                     {data.name}
                 </p>
-                <p className="text-sm text-gray-500">
+                {/* <p className="text-sm text-gray-500">
                     {data.category?.name}
-                </p>
+                </p> */}
+
+                 {/* Price */}
+
+                <div className="font-bold main_gray">
+                <Currency value={data?.price} currencyDisplay="symbol" />
+                </div>
+
+                <div className="my-4">
+                    <Button className="main_secondry_bg w-full justify-center">Захиалах</Button>
+                </div>
+
             </div>
-
-             {/* Price */}
-
-             <div className="flex items-center justify-between">
-                <Currency value={data?.price}/>
-             </div>
-
         </div>
     )
 }

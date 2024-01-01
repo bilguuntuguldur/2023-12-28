@@ -24,21 +24,21 @@ const Footer = () => {
                         />
                     </Link>
                 </div>
-                <div className="">
-                    <p className="main_color pb-8 font-semibold text-sm">
+                <div className="my-8 md:my-2">
+                    <p className="main_color pb-4 md:pb-8 font-semibold text-l">
                         Биднийг дагаарай
                     </p>
                     <ul className="flex gap-6 text-white text-2xl">
                         <li>
-                            <FontAwesomeIcon icon={faFacebook} />
+                            <FontAwesomeIcon icon={faFacebook} className="w-6 h-6"/>
                         </li>
                         <li>
-                            <FontAwesomeIcon icon={faInstagram} />
+                            <FontAwesomeIcon icon={faInstagram} className="w-6 h-6"/>
                         </li>
                     </ul>
                 </div>
-                <div className="">
-                    <p className="main_color pb-8 font-semibold text-sm">
+                <div className="my-8 md:my-2">
+                    <p className="main_color pb-4 md:pb-8 font-semibold text-l">
                         Холбоосууд
                     </p>
                     <ul className="list-none leading-8 text-white text-sm">
@@ -47,21 +47,21 @@ const Footer = () => {
                         <li>Үйлчилгээний нөхцөл</li>
                     </ul>
                 </div>
-                <div className="">
-                    <p className="main_color pb-8 font-semibold text-sm">
+                <div className="my-8 md:my-2">
+                    <p className="main_color pb-4 md:pb-8 font-semibold text-l">
                         Холбоо барих
                     </p>
                     <ul>
                         <li className="flex gap-4">
-                            <span className="main_color"><FontAwesomeIcon icon={faPhone} /></span>
+                            <span className="main_color"><FontAwesomeIcon icon={faPhone} className="w-3 h-3"/></span>
                             <span className="text-white text-sm leading-6">7734-7799</span>
                         </li>
                         <li className="flex gap-4">
-                            <span className="main_color"><FontAwesomeIcon icon={faEnvelope} /></span>
+                            <span className="main_color"><FontAwesomeIcon icon={faEnvelope} className="w-3 h-3"/></span>
                             <span className="text-white text-sm leading-6"> info@tsetsegtmendchilgee.mn </span>
                         </li>
                         <li className="flex gap-4">
-                            <span className="main_color"><FontAwesomeIcon icon={faLocationDot} /></span>
+                            <span className="main_color"><FontAwesomeIcon icon={faLocationDot} className="w-3 h-3"/></span>
                             <span className="text-white text-sm leading-6">Улаанбаатар хот, Засгийн газрын ордны хойно, <br /> Астра цэцгийн дэлгүүр</span>
                         </li>
                     </ul>

@@ -22,15 +22,17 @@ const NavbarActions = () => {
 
     return (
         <div className="flex ml-auto flex items-center gap-x-4">
-            <Button onClick={() => router.push("/cart")}>
+            <Button onClick={() => router.push("/cart")}
+                className="bg-tranparent flex-col items-center relative p-0"    
+            >
                 <Image
                     src="/images/icons/shopping-card.gif"
                     alt="Fingerprint"
                     width={45}
                     height={45}
                 />
-                <span className="text-sm">Сагс</span>
-                <span className="ml-2 text-sm font-medium text-white">{cart.items.length}</span>
+                <span className="text-sm font-normal">Сагс</span>
+                <span className="cart_items_counter text-sm font-medium text-white">{cart.items.length}</span>
             </Button>
         </div>
     )

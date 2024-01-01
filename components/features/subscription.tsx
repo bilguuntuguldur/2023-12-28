@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 const Subscription = () => {
 
     return (
-        <div className="round_box w-full h-auto main_bg text-white grid grid-cols-1 gap-4 items-center p-6 my-32 sm:grid-cols-2 sm:h-80 sm:px-6 md:grid-cols-4 lg:grid-cols-4 lg:h-44">
+        <div className="round_box w-full h-auto main_bg text-white grid grid-cols-1 gap-4 items-center p-6 my-16 sm:grid-cols-2 sm:h-80 sm:px-6 md:grid-cols-4 lg:grid-cols-4 lg:h-44">
             <div className="flex items-center gap-2">
                 <Image 
                     src="/images/icons/gift-box.gif"

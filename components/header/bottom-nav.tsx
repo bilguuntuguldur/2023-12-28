@@ -8,7 +8,7 @@ const BottomHeader = async () => {
     const categories = await getCategories();
     
     return (
-        <div className="border-b py-4">
+        <div className="">
             <div className="flex relative px-4 sm:px-6 lg:px-8 h-16 items-center">
                 <Menu data={categories} />
             </div>

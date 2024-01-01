@@ -1,6 +1,8 @@
 "use client"
 
+import Container from "../ui/container";
 import Link from "next/link";
+import Button from "@/components/ui/button"
 import { usePathname } from "next/navigation";
 
 import { cn } from "@/lib/utils";
@@ -20,20 +22,22 @@ const Menu: React.FC<MenuProps> = ({ data }) => {
     }));
   
     return (
-      <div className="mx-6 flex items-center space-x-4 lg:space-x-6">
-        {routes.map((route) => (
-          <Link
-            key={route.href}
-            href={route.href}
-            className={cn(
-              "text-sn font-medium transition-colors hover:text-black",
-              route.active ? "text-black" : "text-neutral-500"
-            )}
-          >
-            {route.label}
-          </Link>
-        ))}
-      </div>
+      <Container>
+        <div className="mx-2 hidden items-center space-x-4 md:flex lg:space-x-6">
+          <Button className="main_secondry_bg mr-16 text-sm">
+            Цэцэг үзэх
+          </Button>
+          {routes.map((route) => (
+            <Link
+              key={route.href}
+              href={route.href}
+              className="text-sn font-medium transition-colors text-rose-700 hover:main_color"
+              >
+              {route.label}
+            </Link>
+          ))}
+        </div>
+      </Container>
     );
   };
   

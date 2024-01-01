@@ -2,17 +2,14 @@
 
 import { useEffect, useState } from "react";
 
-const formatter = new Intl.NumberFormat("en-US", {
-    style: "currency",
-    currency: "USD"
-});
-
 interface CurrencyProps {
     value?: string | number;
+    currencyDisplay?: "symbol" | "code" | "name" | "narrowSymbol";
 }
 
 const Currency: React.FC<CurrencyProps> = ({
-    value
+    value,
+    currencyDisplay = "symbol"
 }) => {
     const [isMounted, setIsMounted] = useState(false);
 
@@ -20,13 +17,19 @@ const Currency: React.FC<CurrencyProps> = ({
         setIsMounted(true);
     }, []);
 
-    if(!isMounted) {
+    if (!isMounted) {
         return null;
     }
-return(
-    <div className="font-semibold">{formatter.format(Number(value))}</div>
-)
 
+    const formatter = new Intl.NumberFormat("en-US", {
+        style: "currency",
+        currency: "MNT",
+        currencyDisplay
+    });
+
+    return (
+        <div className="font-semibold">{formatter.format(Number(value))}</div>
+    );
 }
 
 export default Currency;

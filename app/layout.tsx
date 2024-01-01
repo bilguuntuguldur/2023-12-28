@@ -13,7 +13,7 @@ const font = Montserrat({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Astra flower shop',
-  description: 'Greate awesome flower online shop',
+  description: 'Create awesome flower online shop',
   icons: {
     icon: ["/favicon.ico?v=4"] 
   }
