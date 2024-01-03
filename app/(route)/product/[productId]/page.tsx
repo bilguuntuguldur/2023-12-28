@@ -23,7 +23,7 @@ const ProductPage: React.FC<ProductPageProps> = async ({
     });
 
     return (
-        <div className="bg-white">
+        <div className="bg-white my-6">
            <Container>
                 <div className="px-4 py-10 sm:px-6 lg:px-8">
                     <div className="lg:grid sm:grid-cols-2 lg:grid-cols-2 lg:items-start lg:gap-x-6">
@@ -34,7 +34,7 @@ const ProductPage: React.FC<ProductPageProps> = async ({
                         <Info data={product}/>
                         </div>
                     </div>
-                    <hr className="mt-10" />
+                    {/* <hr className="mt-16"/> */}
                     <ProductList title="Санал болгох бусад бүтээгдэхүүн" items={suggestedProducts}/>
                 </div>
            </Container>

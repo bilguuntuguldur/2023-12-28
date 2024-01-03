@@ -26,9 +26,14 @@ data
 
     return (
         <div>
-            <h1 className="text-3xl font-bold text-gray-900">{data.name}</h1>
+            <h1 className="text-2xl font-bold main_gray">{data.name}</h1>
+            <div className="mt-3">
+                <p className="text-l main_gray">
+                    {data.description}
+                </p>
+            </div>
             <div className="mt-3 flex items-center justify-between">
-                <p className="text-xl text-gray-900">
+                <p className="text-lg main_gray">
                     <Currency value={data?.price}/>
                 </p>
             </div>
@@ -37,7 +42,7 @@ data
             <div className="mt-10 flex items-center gap-x-3">
                 <Button
                 onClick={onAddToCart} 
-                className="flex items-center gap-x-2">
+                className="flex items-center gap-x-2 px-16 main_secondry_bg">
                     Сагслах
                     <ShoppingCart />
                 </Button>
