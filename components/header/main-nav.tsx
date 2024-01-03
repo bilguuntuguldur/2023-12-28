@@ -5,13 +5,7 @@ import NavbarActions from "./navbar-actions";
 import Container from "../ui/container";
 
 
-interface NavbarProps {
-    toggle: () => void;
-}
-
-const Navbar: React.FC<NavbarProps> = ({ 
-    toggle 
-}) => {
+const Navbar = () => {
     return(
         <div className="main_bg  h-auto p-4 md:h-36 lg:justify-around lg:h-36 text-white">
             <Container>
@@ -35,7 +29,6 @@ const Navbar: React.FC<NavbarProps> = ({
                         <button
                             type="button"
                             className="inline-flex items-center md:hidden"
-                            onClick={toggle}
                         >
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
