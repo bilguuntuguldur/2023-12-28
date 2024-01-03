@@ -7,7 +7,7 @@ const ShopFeatures = () => {
 
     return (
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-4 my-16">
-            <div className="text-center px-6 py-10 rounded-3xl" style={{ 
+            <div className="text-center p-6 rounded-3xl" style={{ 
                 backgroundImage: `url(${backgroundImageOne.src})`,
                 backgroundPosition: "center",
                 backgroundSize: "cover",
