@@ -11,7 +11,7 @@ const PostPage = async () => {
         <Container>
             <div>
                 {posts.map((post) => (
-                  <h4>{post.name}</h4>
+                  <h4 key={post.id}>{post.name}</h4>
                 ))}
             </div>
         </Container>
