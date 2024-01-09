@@ -1,17 +1,27 @@
+
 import { Input } from "@/components/ui/input";
 import Link from "next/link";
 import Image from "next/image";
 import NavbarActions from "./navbar-actions";
 import Container from "../ui/container";
+import { MagnifyingGlassIcon } from '@heroicons/react/24/outline';
+import Button from "../ui/button";
+import { redirect } from "next/navigation";
+import SearchForm from "../search/search-form";
 
+interface NavbarProps {
+    onSearchSubmit: (query: string) => void;
+}
 
-const Navbar = () => {
+const Navbar: React.FC<NavbarProps> = ({
+    onSearchSubmit
+}) => {
     return(
         <div className="main_bg  h-auto p-4 md:h-36 lg:justify-around lg:h-36 text-white">
             <Container>
                 <div className="flex flex-wrap items-center justify-center md:justify-around">
                     <div className="hidden md:flex md:w-32 lg:w-80">
-                        <Input type="search" placeholder="Та юу хайж байна вэ?" className="bg-white w-96 placeholder-gray-600 focus:placeholder-gray-500"/>
+                        <SearchForm onSubmit={onSearchSubmit} />
                     </div>
 
                     <div className="w-full flex justify-between md:w-auto mb-10">

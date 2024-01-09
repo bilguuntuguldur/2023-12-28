@@ -11,13 +11,20 @@ import Navbar from '@/components/header/main-nav';
 
 const font = Montserrat({ subsets: ['latin'] })
 
-export const metadata: Metadata = {
-  title: 'Astra flower shop',
-  description: 'Create awesome flower online shop',
+export const metadata = {
+  metadataBase: new URL("https://nextjs13-seo.vercel.app"),
+  title: {
+    default: "Цэцэгт мэндчилгээ",
+    template: `%s | Explorer`,
+  },
+  description: "Монголын хамгийн enjoyable цэцгийн Астра дэлгүүр.",
+  verification: {
+    google: "google-site-verification=123123123",
+  },
   icons: {
     icon: ["/favicon.ico?v=4"] 
   }
-}
+};
 
 export default function RootLayout({
   children,

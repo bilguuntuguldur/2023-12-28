@@ -33,7 +33,7 @@ const CartPage = () => {
                 <div className="px-4 py-16 sm:px-6 lg:px-8">
                     <h1 className="text-2xl w-full border-b pb-4 font-bold text-black">Захиалгын хуудас</h1>
                     <div className="mt-12 lg:grid lg:grid-cols-12 lg:items-start gap-x-12">
-                        <div className="lg:col-span-7">
+                        <div className="lg:col-span-6">
                             {cart.items.length === 0 && <p className="text-neutral-500">
                                 Одоогоор таны сагсанд бүтээгдэхүүн нэмэгдээгүй байна. </p>}
                             <ul>

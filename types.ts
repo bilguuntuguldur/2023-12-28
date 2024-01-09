@@ -10,6 +10,12 @@ export interface Category {
     billboard: Billboard;
 };
 
+export interface Post {
+    id: string;
+    name: string;
+    description: string
+}
+
 export interface Product {
     id: string;
     category: Category;
@@ -18,6 +24,7 @@ export interface Product {
     price: string;
     isFeatured: boolean;
     images: Image[];
+    query?: string;
 }
 
 export interface Image {
@@ -25,14 +32,4 @@ export interface Image {
     url: string;
 }
 
-export interface Color {
-    id: string;
-    name: string;
-    value: string;
-}
 
-export interface Size {
-    id: string;
-    name: string;
-    value: string;
-}

@@ -7,6 +7,7 @@ import Subscription from "@/components/features/subscription";
 import ProductList from "@/components/product/product-list";
 import Container from "@/components/ui/container";
 import { SubscriptIcon } from "lucide-react";
+import PaginationBar from "@/components/pagination/pagination-bar"
 
 export const revalidate = 0;
 
@@ -20,14 +21,14 @@ const  Homepage = async () =>  {
         <div className="pb-10">
           <Billboard data={billboard}/>
         </div>
-      <Container>
-        <div className="flex flex-col gap-y-8 px-4 sm:px-6 lg:px-8"> 
-          <ProductList title="" items={products}/>
-          <Subscription />
-          <ShopFeatures />
-          <OrderSequence />
-        </div>
-      </Container>
+        <Container>
+          <div className="flex flex-col gap-y-8 px-4 sm:px-6 lg:px-8 text-center"> 
+            <ProductList title="" items={products}/>
+            <Subscription />
+            <ShopFeatures />
+            <OrderSequence />
+          </div>
+        </Container>
     </>
 
   )
