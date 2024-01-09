@@ -3,9 +3,7 @@ import Container from "@/components/ui/container";
 
 
 
-const PostPage = async ({
-
-}) => {
+const PostPage = async () => {
 
   const posts = await getPosts();
 

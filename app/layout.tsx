@@ -31,13 +31,18 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+
+  const handleSearchSubmit = ( query: string ) => {
+      console.log(query)
+  }
+
   return (
     <html lang="en">
       <body className={font.className}>
           <ToastProvider />
           <ModalProvider />
           <TopHeader />
-          <Navbar />
+          <Navbar onSearchSubmit={handleSearchSubmit}/>
           <BottomHeader />
             {children}
           <Footer />
