@@ -1,12 +1,9 @@
 import getProducts from "@/actions/get-products";
-import getCategories from "@/actions/get-category";
 import Container from "@/components/ui/container";
 import Billboard from "@/components/billboard/Billboard";
 import getCategory from "@/actions/get-category";
-import Filter from "./components/filter";
 import Noresult from "@/components/ui/no-result";
 import ProductCard from "@/components/product/product-card";
-import MobileFilters from "./components/mobile-filter";
 
 export const revalidate = 0;
 
